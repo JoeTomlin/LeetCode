@@ -1,0 +1,18 @@
+// Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var isAnagram = function(s, t) {
+    if (s.length !== t.length) return false;
+
+    const A1 = s.split("").sort();
+    const A2 = t.split("").sort();
+
+    return A1.join("") === A2.join("");
+};
+
+// Time: O(n log n)
+// Space: O(n)
